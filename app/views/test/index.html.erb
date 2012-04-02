@@ -1,0 +1,9 @@
+<h1>Test#index</h1>
+<% if current_user %>
+  Welcome <%= current_user.name %>!
+  <%= link_to "Sign Out", signout_path %>
+<% else %>
+  <%= link_to "Sign in with Salesforce", "/auth/salesforce" %>
+<% end %>
+<br/>
+<p id="notice"><%= notice %></p>
